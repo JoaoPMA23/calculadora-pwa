@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#1e1e1e">
+</head>
+<body>
+    <main id="calculadora">
+        <section id="display">
+            <input readonly type="text" id="resultado" placeholder="Resultado">
+            <input readonly type="text" id="expressao" placeholder="0">
+        </section>
+
+        <section id="botoes-funcionais" class="grid">
+            <button data-key="f">x!</button>
+            <button data-key="^">xʸ</button>
+            <button data-key="2√">√n</button>
+            <button data-key="r">ʸ√x</button>
+            <button data-key="l">ln</button>
+            <button data-key="e">eˣ</button>
+            <button data-key="s">sin</button>
+            <button data-key="c">cos</button>
+            <button data-key="(">(</button>
+            <button data-key=")">)</button>
+        </section>
+
+        <section id="botoes-principais" class="grid">
+            <button data-key="7">7</button>
+            <button data-key="8">8</button>
+            <button data-key="9">9</button>
+            <button data-key="DEL">DEL</button>
+            <button data-key="AC">AC</button>
+            <button data-key="4">4</button>
+            <button data-key="5">5</button>
+            <button data-key="6">6</button>
+            <button data-key="*">*</button>
+            <button data-key="/">/</button>
+            <button data-key="1">1</button>
+            <button data-key="2">2</button>
+            <button data-key="3">3</button>
+            <button data-key="+">+</button>
+            <button data-key="-">-</button>
+            <button data-key="0">0</button>
+            <button data-key=".">.</button>
+            <button data-key="=">=</button>
+        </section>
+    </main>
+
+    <button id="trocar-tema">🌗</button>
+
+    <script type="module" src="./assets/scripts/script.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js');
+    }
+    </script>
+</body>
+</html>
